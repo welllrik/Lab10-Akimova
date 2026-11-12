@@ -113,3 +113,20 @@ foreach (string book in books)
 
 Console.WriteLine(found ? "Найдено" : "Не найдено");
 
+string[] names = { "Аня", "Борис", "Вика", "Глеб", "Даша" };
+int[] classGrades = { 5, 4, 5, 3, 4 };
+
+int totalGrades = 0;
+int bestIdx = 0;
+for (int i = 0; i < names.Length; i++)
+{
+    Console.WriteLine($"{names[i]} — {classGrades[i]}");
+    totalGrades += classGrades[i];
+    if (classGrades[i] > classGrades[bestIdx])
+    {
+        bestIdx = i;
+    }
+}
+Console.WriteLine($"Средний балл по классу: {(double)totalGrades / classGrades.Length}");
+Console.WriteLine($"Лучший ученик: {names[bestIdx]}");
+
