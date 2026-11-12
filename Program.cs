@@ -13,3 +13,24 @@ foreach (int grade in grades)
     sumGrades += grade;
 }
 Console.WriteLine($"Сумма оценок: {sumGrades}, средний балл: {(double)sumGrades / grades.Length}");
+
+
+string[] students = { "Аня", "Ярослав", "Вика" };
+int studentCount = 0;
+foreach (string student in students)
+{
+    studentCount++;
+}
+Console.WriteLine($"Всего учеников: {studentCount}");
+
+
+int[] points = { 10, 20, 15 };
+foreach (int point in points)
+for (int i = 0; i < points.Length; i++)
+{
+    points[i] = points[i] + 5;
+}
+foreach (int point in points)
+{
+    Console.WriteLine(point);
+}
